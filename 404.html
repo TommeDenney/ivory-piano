@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keys to the Universe has moved</title>
+<script>
+  // Same origin, so saved progress carries over. Unregister the old service worker, then forward.
+  (async () => {
+    try { for (const r of await navigator.serviceWorker.getRegistrations()) if (r.scope.includes('/ivory-piano/')) await r.unregister(); } catch (e) {}
+    location.replace('https://tommedenney.github.io/keys-to-the-universe/' + location.search + location.hash);
+  })();
+</script>
+<style>body{background:#0b0b1e;color:#eee;font:16px system-ui;display:grid;place-items:center;min-height:100vh;margin:0;padding:16px;text-align:center}a{color:#a78bfa}</style>
+</head><body><p>Keys to the Universe has moved to<br><a href="https://tommedenney.github.io/keys-to-the-universe/">tommedenney.github.io/keys-to-the-universe</a></p></body></html>
